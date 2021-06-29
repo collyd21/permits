@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- Title -->
+<h1 class= "text-center title">This is the MEWP page</h1>
+
+<div class="container">
+   <div class="table-responsive">
+      <table class="table table-body">
+         <thead>
+            <tr>
+               <th scope="col">Make/Model</th>
+               <th scope="col">Serial Number</th>
+               <th scope="col">Date Inspected</th>
+               <th scope="col">Location</th>
+               <th scope="col">Inspected By</th>
+               <th scope="col"></th>
+               <th scope="col"></th>
+            </tr>
+         </thead>
+         {% for mewp in mewps %}
+         <tbody class="table-rows">
+            <tr class="each-row">
+               <td>{{ mewp.make_model }}</td>
+               <td>{{ mewp.sn_no }}</td>
+               <td>{{ mewp.date }}</td>
+               <td>{{ mewp.location }}</td>
+               <td>{{ mewp.inspected_by }}</td>
+               <td><a class="btn btn-primary" href="{% url 'view_checksheet' mewp.id %}" role="button">View Permit</a></td>
+               <td><a class="btn btn-danger" href="{% url 'delete_checksheet' mewp.id %}" role="button">Delete Permit</a></td>              
+            </tr>
+         </tbody>
+         {% endfor %}
+      </table>
+   </div>
+   <a class="btn btn-success" href="{% url 'add_checksheet' %}" role="button">New Checksheet</a>
+   <a class="btn btn-dark" href="{% url 'home' %}" role="button">Back</a>
+</div>
+{% endblock %}

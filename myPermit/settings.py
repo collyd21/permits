@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'users',
+    'mewp',
+    'bootstrap_datepicker',
 ]
 
 MIDDLEWARE = [
