@@ -44,23 +44,22 @@
 </div>
 <div class="row">
    <div class="col-md-12 mb-3">
-    
-      <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="question_1" id="question_1_yes" value="Yes">
-         <label class="form-check-label mr-5" for="question_1_yes">Yes</label>
-       </div>
-       
-       <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="question_1" id="question_1_no" value="No">
-         <label class="form-check-label mr-5" for="question_1_no">No</label>
-       </div>
-       
-       <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="question_1" id="question_1_na" value="NA">
-         <label class="form-check-label mr-5" for="question_1_na">N/A</label>
+      <div class="form-check inline">
+        {% if checksheet.question_1 == 'yes' %}
+         <input class="form-check-input" type="radio"  checked>
+         <label class="form-check-label mr-5">Yes</label>
+         {% elif checksheet.question_1 == 'no' %}
+         <input class="form-check-input" type="radio" checked>
+         <label class="form-check-label mr-5">No</label>
+         {% elif checksheet.question_1 == 'na' %}
+         <input class="form-check-input" type="radio" checked>
+         <label class="form-check-label mr-5">N/A</label>
+         {% endif %}
        </div>
       </div>
-   </div>
+    </div>
+  
+    
 <!-- Question 2 -->
       <div class="row">
          <div class="col-md-12">
@@ -68,27 +67,23 @@
    </div>
 </div>
 <div class="row">
-   <div class="col-md-12 mb-3">
-    {% if checksheet.question_2_yes %}
-      <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="question_2" id="question_2_yes" value="Yes">
-         <label class="form-check-label mr-5" for="question_2_yes">Yes</label>
-       </div>
-       {% endif %}
-       {% if checksheet.question_2.no %}
-       <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="question_2" id="question_2_no" value="No">
-         <label class="form-check-label mr-5" for="question_2_no">No</label>
-       </div>
-       {% endif %}
-       {% if checksheet.question_2.na %}
-       <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="question_2" id="question_2_na" value="NA">
-         <label class="form-check-label mr-5" for="question_2_na">N/A</label>
-       </div>
-       {% endif %}
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+       {% if checksheet.question_2 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_2 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_2 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
+     </div>
    </div>
+    
+   
 <!-- Question 3 -->
 <div class="row">
    <div class="col-md-12">
@@ -97,20 +92,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_3" id="question_3_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_3_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_3" id="question_3_no" value="No">
-        <label class="form-check-label mr-5" for="question_3_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_3" id="question_3_na" value="NA">
-        <label class="form-check-label mr-5" for="question_3_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_3 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_3 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_3 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 4 -->
 <div class="row">
    <div class="col-md-12">
@@ -119,20 +114,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_4" id="question_4_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_4_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_4" id="question_4_no" value="No">
-        <label class="form-check-label mr-5" for="question_4_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_4" id="question_4_na" value="NA">
-        <label class="form-check-label mr-5" for="question_4_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_4 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_4 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_4 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 5 -->
 <div class="row">
    <div class="col-md-12">
@@ -141,20 +136,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_5" id="question_5_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_5_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_5" id="question_5_no" value="No">
-        <label class="form-check-label mr-5" for="question_5_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_5" id="question_5_na" value="NA">
-        <label class="form-check-label mr-5" for="question_5_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_5 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_5 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_5 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 6 -->
 <div class="row">
    <div class="col-md-12">
@@ -163,20 +158,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_6" id="question_6_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_6_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_6" id="question_6_no" value="No">
-        <label class="form-check-label mr-5" for="question_6_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_6" id="question_6_na" value="NA">
-        <label class="form-check-label mr-5" for="question_6_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_6 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_6 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_6 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 7 -->
 <div class="row">
    <div class="col-md-12">
@@ -185,20 +180,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_7" id="question_7_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_7_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_7" id="question_7_no" value="No">
-        <label class="form-check-label mr-5" for="question_7_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_7" id="question_7_na" value="NA">
-        <label class="form-check-label mr-5" for="question_7_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_7 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_7 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_7 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 8 -->
 <div class="row">
    <div class="col-md-12">
@@ -207,20 +202,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_8" id="question_8_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_8_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_8" id="question_8_no" value="No">
-        <label class="form-check-label mr-5" for="question_8_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_8" id="question_8_na" value="NA">
-        <label class="form-check-label mr-5" for="question_8_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_8 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_8 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_8 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 9 -->
 <div class="row">
    <div class="col-md-12">
@@ -229,20 +224,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_9" id="question_9_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_9_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_9" id="question_9_no" value="No">
-        <label class="form-check-label mr-5" for="question_9_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_9" id="question_9_na" value="NA">
-        <label class="form-check-label mr-5" for="question_9_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_9 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_9 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_9 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 10 -->
 <div class="row">
    <div class="col-md-12">
@@ -251,20 +246,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_10" id="question_10_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_10_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_10" id="question_10_no" value="No">
-        <label class="form-check-label mr-5" for="question_10_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_10" id="question_10_na" value="NA">
-        <label class="form-check-label mr-5" for="question_10_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_10 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_10 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_10 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 11 -->
 <div class="row">
    <div class="col-md-12">
@@ -273,20 +268,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_11" id="question_11_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_11_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_11" id="question_11_no" value="No">
-        <label class="form-check-label mr-5" for="question_11_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_11" id="question_11_na" value="NA">
-        <label class="form-check-label mr-5" for="question_11_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_11 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_11 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_11 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 12 -->
 <div class="row">
    <div class="col-md-12">
@@ -295,20 +290,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_12" id="question_12_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_12_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_12" id="question_12_no" value="No">
-        <label class="form-check-label mr-5" for="question_12_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_12" id="question_12_na" value="NA">
-        <label class="form-check-label mr-5" for="question_12_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_12 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_12 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_12 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 13 -->
 <div class="row">
    <div class="col-md-12">
@@ -317,20 +312,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_13" id="question_13_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_13_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_13" id="question_13_no" value="No">
-        <label class="form-check-label mr-5" for="question_13_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_13" id="question_13_na" value="NA">
-        <label class="form-check-label mr-5" for="question_13_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_13 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_13 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_13 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 14 -->
 <div class="row">
    <div class="col-md-12">
@@ -339,20 +334,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_14" id="question_14_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_14_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_14" id="question_14_no" value="No">
-        <label class="form-check-label mr-5" for="question_14_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_14" id="question_14_na" value="NA">
-        <label class="form-check-label mr-5" for="question_14_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_14 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_14 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_14 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 15 -->
 <div class="row">
    <div class="col-md-12">
@@ -361,20 +356,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_15" id="question_15_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_15_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_15" id="question_15_no" value="No">
-        <label class="form-check-label mr-5" for="question_15_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_15" id="question_15_na" value="NA">
-        <label class="form-check-label mr-5" for="question_15_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_15 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_15 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_15 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 16 -->
 <div class="row">
    <div class="col-md-12">
@@ -383,20 +378,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_16" id="question_16_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_16_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_16" id="question_16_no" value="No">
-        <label class="form-check-label mr-5" for="question_16_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_16" id="question_16_na" value="NA">
-        <label class="form-check-label mr-5" for="question_16_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_16 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_16 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_16 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 17 -->
 <div class="row">
    <div class="col-md-12">
@@ -405,20 +400,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_17" id="question_17_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_17_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_17" id="question_17_no" value="No">
-        <label class="form-check-label mr-5" for="question_17_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_17" id="question_17_na" value="NA">
-        <label class="form-check-label mr-5" for="question_17_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_17 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_17 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_17 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 18 -->
 <div class="row">
    <div class="col-md-12">
@@ -427,20 +422,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_18" id="question_18_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_18_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_18" id="question_18_no" value="No">
-        <label class="form-check-label mr-5" for="question_18_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_18" id="question_18_na" value="NA">
-        <label class="form-check-label mr-5" for="question_18_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_18 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_18 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_18 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 19 -->
 <div class="row">
    <div class="col-md-12">
@@ -449,20 +444,20 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_19" id="question_19_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_19_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_19" id="question_19_no" value="No">
-        <label class="form-check-label mr-5" for="question_19_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_19" id="question_19_na" value="NA">
-        <label class="form-check-label mr-5" for="question_19_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_19 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_19 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_19 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
 <!-- Question 20 -->
 <div class="row">
   <div class="col-md-12">
@@ -471,26 +466,28 @@
 </div>
 <div class="row">
   <div class="col-md-12 mb-3">
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_20" id="question_20_yes" value="Yes">
-        <label class="form-check-label mr-5" for="question_20_yes">Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_20" id="question_20_no" value="No">
-        <label class="form-check-label mr-5" for="question_20_no">No</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="question_20" id="question_20_na" value="NA">
-        <label class="form-check-label mr-5" for="question_20_na">N/A</label>
+     <div class="form-check inline">
+       {% if checksheet.question_20 == 'yes' %}
+        <input class="form-check-input" type="radio"  checked>
+        <label class="form-check-label mr-5">Yes</label>
+        {% elif checksheet.question_20 == 'no' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">No</label>
+        {% elif checksheet.question_20 == 'na' %}
+        <input class="form-check-input" type="radio" checked>
+        <label class="form-check-label mr-5">N/A</label>
+        {% endif %}
       </div>
      </div>
-  </div>
+   </div>
+
       <div class="row">
          <div class="col-md-12 mb-3">
             <label for="comments">Comments</label>
             <textarea class="form-control" name="comments" id="comments" rows="3"></textarea>
          </div>
       </div>
+    </div>
       <button class="btn btn-dark rounded-pill py-2 mb-4" type="submit">Submit</button>
-
+    
 {% endblock %}
