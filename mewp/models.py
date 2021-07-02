@@ -1,10 +1,9 @@
 from django.db import models
-YES_NO_NA = (
+QUESTION_MEWP = (
     ('yes', 'Yes'),
     ('no', 'No'),
     ('na', 'NA'),
 )
-
 
 class Mewp(models.Model):
     make_model = models.CharField(max_length=120)
@@ -12,26 +11,26 @@ class Mewp(models.Model):
     inspected_by = models.CharField(max_length=80)
     location = models.CharField(max_length=80)
     date = models.DateField()
-    question_1 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_2 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_3 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_4 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_5 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_6 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_7 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_8 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_9 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_10 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_11 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_12 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_13 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_14 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_15 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_16 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_17 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_18 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_19 = models.CharField(max_length=3, choices=YES_NO_NA)
-    question_20 = models.CharField(max_length=3, choices=YES_NO_NA)
+    question_1 = models.CharField(max_length=3, null=True, default=None, choices=QUESTION_MEWP)
+    question_2 = models.CharField(max_length=3, null=True, default=None, choices=QUESTION_MEWP)
+    question_3 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_4 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_5 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_6 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_7 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_8 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_9 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_10 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_11 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_12 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_13 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_14 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_15 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_16 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_17 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_18 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_19 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
+    question_20 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
     comments = models.CharField(max_length=300)
 
     class Meta:

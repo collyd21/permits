@@ -24,13 +24,13 @@ def add_checksheet(request):
         checksheet = MewpForm(request.POST)
         if checksheet.is_valid():
             checksheet.save()
-            messages.add_message(request, messages.INFO, 'Checksheet Submitted.')
             return redirect(reverse('mewp'))
     else:
         checksheet = MewpForm()
-        
     return render(request, 'add_checksheet.html', {'form': checksheet})
 
+
+@login_required
 def view_checksheet(request, id):
     """ A view to view a checksheet """
     checksheet = get_object_or_404(Mewp, pk=id)
@@ -47,11 +47,9 @@ def delete_checksheet(request, id):
     """ Delete an individual checksheet """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only admin can do that.')
         return redirect(reverse('mewp'))
 
     checksheet = get_object_or_404(Mewp, pk=id)
     checksheet.delete()
-    messages.success(request, 'Checksheet successfully deleted!')
 
     return redirect(reverse('mewp'))
