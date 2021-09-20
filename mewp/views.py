@@ -25,6 +25,8 @@ def add_checksheet(request):
         if checksheet.is_valid():
             checksheet.save()
             return redirect(reverse('mewp'))
+        else:
+            print('Failed to add checksheet. Please ensure the form is valid.')
     else:
         checksheet = MewpForm()
     return render(request, 'add_checksheet.html', {'form': checksheet})

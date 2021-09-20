@@ -6,8 +6,8 @@
 
 <div class="container">
    <div class="table-responsive">
-      <table class="table table-body">
-         <thead>
+      <table class="table table-body table-striped ">
+         <thead class="thead-dark">
             <tr>
                <th scope="col">Make/Model</th>
                <th scope="col">Serial Number</th>
@@ -26,8 +26,8 @@
                <td>{{ mewp.date }}</td>
                <td>{{ mewp.location }}</td>
                <td>{{ mewp.inspected_by }}</td>
-               <td><a class="btn btn-primary" href="{% url 'view_checksheet' mewp.id %}" role="button">View Permit</a></td>
-               <td><a class="btn btn-danger" href="{% url 'delete_checksheet' mewp.id %}" role="button">Delete Permit</a></td>              
+               <td><a class="btn btn-primary" href="{% url 'view_checksheet' mewp.id %}" role="button">View Checksheet</a></td>
+               <td><a class="btn btn-danger" href="{% url 'delete_checksheet' mewp.id %}" role="button">Delete Checksheet</a></td>              
             </tr>
          </tbody>
          {% endfor %}

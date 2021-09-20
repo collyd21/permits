@@ -31,7 +31,7 @@ class Mewp(models.Model):
     question_18 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
     question_19 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
     question_20 = models.CharField(max_length=3, null=True, default=None,  choices=QUESTION_MEWP)
-    comments = models.CharField(max_length=300)
+    comments = models.CharField(max_length=3000, null=True, blank=True)
 
     class Meta:
         ordering = ['location']

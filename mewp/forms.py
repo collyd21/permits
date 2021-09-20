@@ -1,7 +1,6 @@
 from django import forms
 from .models import Mewp
 
-
 class MewpForm(forms.ModelForm):
     class Meta:
         model = Mewp
@@ -28,3 +27,4 @@ class MewpForm(forms.ModelForm):
             'question_19': forms.RadioSelect,
             'question_20': forms.RadioSelect,
         }
+
