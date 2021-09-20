@@ -1,5 +1,36 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
+{% if request.user.is_authenticated %}
+<h3 class="testing block">You are logged in as: {{ user.username }}</h3>
+<a href="{% url 'account_logout' %}"><button class="btn btn-dark rounded-pill py-2 mb-2 mb-3">Logout</button></a>
+<div class="container">
+   <div class="text-center row mb-5 mt-5">
+      <div class="col-lg-4 col-md-4 col-sm-6">
+         <div class="card mb-4 text-center">
+            <a href="{% url 'mewp' %}">
+               <img src="https://www.pdsigns.ie/contentFiles/productImages/Medium/CSC80.jpg" class="card-img-top" alt="#">
+               <div class="card-body">
+                  <h5 class="card-title">MEWP</h5>
+                  <p class="card-text"> Daily Checklist</p>
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+{% else %}
+<div class="testing block">This is the homepage but login first</div>
+<div class="row">
+<div class="col-3">
+    <a href="{% url 'account_login' %}"><button class="btn btn-dark rounded-pill py-2 mb-2 btn-block mb-3">Login</button></a>
+</div>
+</div>
+{% endif %}
+
 <div class="testing block"> testing</div>
+
 {% endblock %}
+
+

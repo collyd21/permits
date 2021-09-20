@@ -1,0 +1,556 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- Title -->
+<h1 class="text-center title">New Checksheet</h1>
+<!-- Contact form -->
+<div class="container mt-5">
+    
+       <!-- Make & Model -->
+      <div class="row">
+         <div class="col-md-6 mb-3">
+            <label for="make_model">Make/Model</label>
+            <input type="text" class="form-control" name="make_model" id="make_model" value="{{ checksheet.make_model }}" disabled>
+         </div>
+      <!-- Serial Number -->
+         <div class="col-md-6 mb-3">
+            <label for="sn_no">Serial Number</label>
+            <input type="text" class="form-control" name="sn_no" id="sn_no" value="{{ checksheet.sn_no }}" disabled>
+         </div>
+      </div>
+      <!-- Inspected By -->
+      <div class="row">
+         <div class="col-md-4 mb-3">
+            <label for="inspected_by">Inspected By</label>
+            <input type="text" class="form-control" name="inspected_by" id="inspected_by" value="{{ checksheet.inspected_by }}" disabled>
+         </div>
+      <!-- Location -->
+        <div class="col-md-4 mb-3">
+           <label for="location">Location</label>
+           <input type="text" class="form-control" name="location" id="location" value="{{ checksheet.location }}" disabled>
+        </div>      
+         <!-- Date -->
+         <div class="col-md-4 mb-3">
+            <label for="date">Date</label>
+            <input class="form-control" type="text" id="date" name="date" value="{{ checksheet.date }}" disabled>
+         </div>
+      </div>
+
+<!-- Question 1 -->
+      <div class="row">
+         <div class="col-md-12">
+      <label for="question_1">1. Have you been trained to operate the machine and carry out the pre-use checks?</label>
+   </div>
+</div>
+<div class="row">
+   <div class="col-md-12 mb-3">
+      <div class="form-check inline">
+        {% if checksheet.question_1 == 'yes' %}
+        <div class="btn btn-success" href="#" >Yes</div>
+         <!-- <input class="form-check-input" type="radio"  checked> -->
+         <!-- <label class="form-check-label mr-5">Yes</label> -->
+         {% elif checksheet.question_1 == 'no' %}
+         <div class="btn btn-danger" href="#" >No</div>
+         <!-- <input class="form-check-input" type="radio" checked>
+         <label class="form-check-label mr-5">No</label> -->
+         {% elif checksheet.question_1 == 'na' %}
+         <div class="btn btn-secondary" href="#" >N/A</div>
+         <!-- <input class="form-check-input" type="radio" checked>
+         <label class="form-check-label mr-5">N/A</label> -->
+         {% endif %}
+       </div>
+      </div>
+    </div>
+  
+    
+<!-- Question 2 -->
+      <div class="row">
+         <div class="col-md-12">
+      <label for="question_2">2. Is the MEWP certificate & manual in the machine?</label>
+   </div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+       {% if checksheet.question_2 == 'yes' %}
+       <div class="btn btn-success" href="#" >Yes</div>
+       <!-- <input class="form-check-input" type="radio"  checked> -->
+       <!-- <label class="form-check-label mr-5">Yes</label> -->
+       {% elif checksheet.question_2 == 'no' %}
+       <div class="btn btn-danger" href="#" >No</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">No</label> -->
+       {% elif checksheet.question_2 == 'na' %}
+       <div class="btn btn-secondary" href="#" >N/A</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">N/A</label> -->
+        {% endif %}
+      </div>
+     </div>
+   </div>
+    
+   
+<!-- Question 3 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_3">3. Drive the Platform a few feet checking for oil leaks. Any leaks present?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+       {% if checksheet.question_3 == 'yes' %}
+       <div class="btn btn-success" href="#" >Yes</div>
+       <!-- <input class="form-check-input" type="radio"  checked> -->
+       <!-- <label class="form-check-label mr-5">Yes</label> -->
+       {% elif checksheet.question_3 == 'no' %}
+       <div class="btn btn-danger" href="#" >No</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">No</label> -->
+       {% elif checksheet.question_3 == 'na' %}
+       <div class="btn btn-secondary" href="#" >N/A</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">N/A</label> -->
+        {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 4 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_4">4.Check the emergency lowering device to lower the platform. Does it work?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+       {% if checksheet.question_4 == 'yes' %}
+       <div class="btn btn-success" href="#" >Yes</div>
+       <!-- <input class="form-check-input" type="radio"  checked> -->
+       <!-- <label class="form-check-label mr-5">Yes</label> -->
+       {% elif checksheet.question_4 == 'no' %}
+       <div class="btn btn-danger" href="#" >No</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">No</label> -->
+       {% elif checksheet.question_4 == 'na' %}
+       <div class="btn btn-secondary" href="#" >N/A</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">N/A</label> -->
+        {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 5 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_5">5. Are the guardrails fitted and properly attached to the platform?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+       {% if checksheet.question_5 == 'yes' %}
+       <div class="btn btn-success" href="#" >Yes</div>
+       <!-- <input class="form-check-input" type="radio"  checked> -->
+       <!-- <label class="form-check-label mr-5">Yes</label> -->
+       {% elif checksheet.question_5 == 'no' %}
+       <div class="btn btn-danger" href="#" >No</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">No</label> -->
+       {% elif checksheet.question_5 == 'na' %}
+       <div class="btn btn-secondary" href="#" >N/A</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">N/A</label> -->
+        {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 6 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_6">6. Are gates that have spring closing devices operating without sticking?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+   <div class="form-check inline">
+       {% if checksheet.question_6 == 'yes' %}
+       <div class="btn btn-success" href="#" >Yes</div>
+       <!-- <input class="form-check-input" type="radio"  checked> -->
+       <!-- <label class="form-check-label mr-5">Yes</label> -->
+       {% elif checksheet.question_6 == 'no' %}
+       <div class="btn btn-danger" href="#" >No</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">No</label> -->
+       {% elif checksheet.question_6 == 'na' %}
+       <div class="btn btn-secondary" href="#" >N/A</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">N/A</label> -->
+        {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 7 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_7">7. When drop bars are fitted to the entrance do they drop down freely?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+   <div class="form-check inline">
+       {% if checksheet.question_7 == 'yes' %}
+       <div class="btn btn-success" href="#" >Yes</div>
+       <!-- <input class="form-check-input" type="radio"  checked> -->
+       <!-- <label class="form-check-label mr-5">Yes</label> -->
+       {% elif checksheet.question_7 == 'no' %}
+       <div class="btn btn-danger" href="#" >No</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">No</label> -->
+       {% elif checksheet.question_7 == 'na' %}
+       <div class="btn btn-secondary" href="#" >N/A</div>
+       <!-- <input class="form-check-input" type="radio" checked>
+       <label class="form-check-label mr-5">N/A</label> -->
+        {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 8 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_8">8. Is the sliding deck extension moving smoothly?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_8 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_8 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_8 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 9 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_9">9. Does the emergency-stop and ground control switch for operation work?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_9 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_9 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_9 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 10 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_10">10. Has all rubbish and all nonessential items been removed from the basket?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_10 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_10 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_10 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 11 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_11">11. Are all tyres and wheels in good condition?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_11 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_11 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_11 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 12 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_12">12. Do all control checks work properly (e.g. brakes, steering, Joystick, spring buttons, horn, connections etc..</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_12 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_12 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_12 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 13 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_13">13. Are oil & diesel levels and hydraulic hoses ok?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_13 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_13 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_13 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 14 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_14">14. Does the machine have enough charge in the battery?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_14 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_14 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_14 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 15 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_15">15. Are all electrics in good condition, leads and plugs?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_15 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_15 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_15 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 16 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_16">16. Are pivot pins secure? (if applicable)</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_16 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_16 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_16 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 17 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_17">17. Are stabilizing jacks functioning properly? (if fitted)</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_17 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_17 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_17 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 18 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_18">18. Is the machine in good condition and safe to operate?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_18 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_18 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_18 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 19 -->
+<div class="row">
+   <div class="col-md-12">
+<label for="question_19">19. Main MEWP touch points such as Gate , Joystick , Controls , Handrails etc wiped down before use?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_19 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_19 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_19 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+<!-- Question 20 -->
+<div class="row">
+  <div class="col-md-12">
+<label for="question_20">20. Disinfectant available to wipe /sanitize touch points?</label>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12 mb-3">
+     <div class="form-check inline">
+      {% if checksheet.question_20 == 'yes' %}
+      <div class="btn btn-success" href="#" >Yes</div>
+      <!-- <input class="form-check-input" type="radio"  checked> -->
+      <!-- <label class="form-check-label mr-5">Yes</label> -->
+      {% elif checksheet.question_20 == 'no' %}
+      <div class="btn btn-danger" href="#" >No</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">No</label> -->
+      {% elif checksheet.question_20 == 'na' %}
+      <div class="btn btn-secondary" href="#" >N/A</div>
+      <!-- <input class="form-check-input" type="radio" checked>
+      <label class="form-check-label mr-5">N/A</label> -->
+       {% endif %}
+      </div>
+     </div>
+   </div>
+
+      <div class="row">
+         <div class="col-md-12 mb-3">
+            <label for="comments">Comments</label>
+            <textarea class="form-control" name="comments" id="comments" rows="3" disabled>{{ checksheet.comments }}</textarea>
+         </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-12 mt-4 mb-4 text-center">
+    <a class="btn btn-dark" href="{% url 'mewp' %}" role="button">Back</a>
+   </div>
+</div>
+{% endblock %}

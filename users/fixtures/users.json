@@ -1,0 +1,50 @@
+[
+  {
+    "pk": 1,
+    "model": "users.user",
+    "fields": {
+      "name": "Colm Doyle",
+      "contractor": "STS",
+      "title": "QAQC",
+      "supervisor": "True",
+      "image_url": "https://miro.medium.com/max/600/1*PiHoomzwh9Plr9_GA26JcA.png",
+      "image": "User1.png"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "users.user",
+    "fields": {
+      "name": "Joe Bloggs",
+      "contractor": "PM Group",
+      "title": "Safety Officer",
+      "supervisor": "True",
+      "image_url": "https://www.pngkey.com/png/detail/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png",
+      "image": "User2.png"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "users.user",
+    "fields": {
+      "name": "John Smith",
+      "contractor": "Sirus",
+      "title": "Project Manager",
+      "supervisor": "True",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH4dcYWVFHFsz8M3Rsjpy2Hg6gQAmgbCIwWA&usqp=CAU",
+      "image": "User3.jpeg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "users.user",
+    "fields": {
+      "name": "General Operative",
+      "contractor": "STS",
+      "title": "Electrician",
+      "supervisor": "False",
+      "image_url": "https://www.kindpng.com/picc/m/163-1636340_user-avatar-icon-avatar-transparent-user-icon-png.png",
+      "image": "User4.png"    
+    }
+  }
+]
