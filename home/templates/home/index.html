@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
 {% if request.user.is_authenticated %}
 <h3 class="testing block">You are logged in as: {{ user.username }}</h3>
 <a href="{% url 'account_logout' %}"><button class="btn btn-dark rounded-pill py-2 mb-2 mb-3">Logout</button></a>
@@ -27,6 +28,9 @@
 </div>
 </div>
 {% endif %}
+
+<div class="testing block"> testing</div>
+
 {% endblock %}
 
 
